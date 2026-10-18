@@ -1,31 +1,31 @@
 import java.util.Random;
 
+
+
 public class Main {
-
-    char[] vogais = {'a', 'e', 'i', 'o', 'u'};
-
-    char[] consoantes =  {'b','c','d', 'f', 'g','h','i','j','k', 'l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
-
-    char[] alphabet = {'a','b','c','d', 'e','f','g','h','i','j','k', 'l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
-
-    int indiceVogais = 0;
-    int indiceAlphabet =0;
-
 
     public static void main(String[] args) {
 
-        Random random = new Random();
+    char[] vogais = {'a', 'e', 'i', 'o', 'u'};
 
-        random.nextInt(alphabet.length);
+    char[] consoantes =  {'b','c','d', 'f', 'g','h','j','k','l','m','n','p','q','r','s','t','v','w','x','y','z'};
 
+
+    Random random = new Random(); // Criei o objeto que irá sortear meus números
+
+    char[] nome = new char[5];
+
+    for(int i = 0; i < nome.length; i++){ // Aqui ficará a instrução para preencher uma posição
+        if (i % 2 == 0) { //aqui ficará uma consoante aleatória
+            nome[i] = consoantes[random.nextInt(consoantes.length)];
+        } else{
+            nome[i] = vogais[random.nextInt(vogais.length)];
+
+        }
+    }
+    System.out.println(nome);
 
     }
-
-
-
-
-
-
 
 
 }
